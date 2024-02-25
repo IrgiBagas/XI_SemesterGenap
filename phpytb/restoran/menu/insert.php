@@ -41,10 +41,10 @@
         $temp = $_FILES['gambar']['tmp_name'];
 
         if (empty($gambar)) {
-            echo "<h3>GAMBAR KOSONG</h3>"
+            echo "<h3>GAMBAR KOSONG</h3>";
         }else{
-            $sql = "INSERT INTO tblmenu VALUES ('', '$idkategori', '$idmenu', '$gambar', '$harga')"
-            move_uploaded_file($temp.'../upload/'.$gambar);
+            $sql = "INSERT INTO tblmenu VALUES ('', '$idkategori', '$idmenu', '$gambar', '$harga')";
+            move_uploaded_file($temp.'../upload'.$gambar);
 
             $db->runSQL($sql);
             header("location:?f=menu&m=select");

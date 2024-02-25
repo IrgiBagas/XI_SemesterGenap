@@ -27,7 +27,7 @@
 
         public function getITEM($sql){
             $result = mysqli_query($this->koneksi, $sql);
-            $row = mysqli_fetch_assoch($result);
+            $row = mysqli_fetch_assoc($result);
             return $row;
         }
 
